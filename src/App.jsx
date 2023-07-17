@@ -10,7 +10,7 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-// import OrderDate from './components/Date/OrderDate'
+
 
 
 
@@ -33,7 +33,8 @@ function App() {
 
   return (
     <>
-      {/* <OrderDate value={responseData} /> */}
+    <h1 className='tlTitle'>Bixal</h1>
+    <h5></h5>
       <BixalTimeline value={responseData}/>
     </>
   )

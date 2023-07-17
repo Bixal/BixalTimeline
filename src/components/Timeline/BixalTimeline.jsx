@@ -1,19 +1,11 @@
 import React from 'react';
-import { useState } from 'react';
-// import DateConverter from '../DateConvertion/DateConvertion';
+import LargeCard from '../Card/LargeCard/LargeCard.jsx';
+import SmallCard from '../Card/SmallCard/SmallCard.jsx';
 
 // Timeline Components
 import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineDot from '@mui/lab/TimelineDot';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-
-// Card Components
-import { Card, CardActions, Button, CardContent, Typography, CardMedia, Modal, Box} from '@mui/material'
-import OrderDate from '../Date/OrderDate';
-
+import { withStyles } from '@mui/material';
+import { TimelineConnector, TimelineContent, TimelineSeparator } from '@mui/lab';
 
 export default function BixalTimeline({ value }) {
 
@@ -27,54 +19,36 @@ export default function BixalTimeline({ value }) {
       newData.sort(function(a, b){
           return a.newDate - b.newDate
       })
+      
   })
 
   // RETURN AS TIMELINE COMPONENT
   return (<>
     <Timeline position="alternate">
-      {newData.map(({id, newDate, title, desc, photo}) => {
-        
-        // Reformat Date to Month, Day, Year
-        let oldDate = new Date(newDate)
-        let oldDateMonth = oldDate.toLocaleDateString("default", {month:'long'})
-        let oldDateYear = oldDate.toLocaleDateString("default", {year:'numeric'})
-        let reformattedDate = oldDateMonth + " " + oldDateYear
-
-        return (<TimelineItem key={id}>
-          <TimelineSeparator>
-            <TimelineDot />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>                                
-            <Card elevation={4}>
-              {photo.map(({url}) => {
-                return (
-                  <CardMedia
-                    key={id}
-                    component="img"
-                    height="140"
-                    image={url}
-                  />)
-              })}
-              <CardContent>
-                <Typography variant="h5">
-                  {reformattedDate}
-                </Typography>
-                <hr />
-                <Typography variant='h4'>
-                  {title}
-                </Typography>
-                <br />
-                <Typography variant="body1">
-                  {desc}
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button>More</Button>
-              </CardActions>
-          </Card>
-          </TimelineContent>
-        </TimelineItem>)
+      {newData.map(({id, newDate, title, desc, photo, contentType}) => {
+        let milestoneType = contentType.value
+        if (milestoneType === "large"){
+          return (
+          <LargeCard
+            key = {id}
+            id = {id} 
+            newDate = {newDate} 
+            title = {title} 
+            desc = {desc} 
+            photo = {photo} 
+            contentType = {contentType}
+            />)
+        } else if (milestoneType === "small") {
+          return (
+          <SmallCard
+            key = {id}
+            id = {id} 
+            newDate = {newDate} 
+            title = {title} 
+            desc = {desc} 
+            photo = {photo} 
+            contentType = {contentType}/>)
+        }
       })}
     </Timeline>
   </>)
