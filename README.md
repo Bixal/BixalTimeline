@@ -8,4 +8,5 @@ JavaScript implementation of Bixal's timeline
     - @mui/lab: installs timeline components
     - @fontsource/roboto: installs Roboto font
 3. ```npm install axios``` installs axios so app is able to connect to Baserow database
+4. ```npm run dev``` to start project!
 
