@@ -6,12 +6,6 @@ body {
     display: none;
 }
 
-/* Connector lines disappear when this code is implemented */
-/* .MuiTimelineItem-root {
-    display: flex;
-    flex-direction: column;
-} */
-
 .MuiTypography-root {
     align-items: left;
 }
@@ -50,4 +44,45 @@ body {
     height: 75px;
     margin: 20px auto;
     width: 2px;
+}
+
+.modalContent {
+    width: auto;
+    height: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 10px;
+    display: flex;
+}
+
+.modalText {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.modalTitle {
+    padding: 25px;
+    align-self: center;
+    text-align: center;
+}
+
+.modalDesc {
+    display: flex;
+    padding: 20px;
+    height: 50%;
+    width: auto;
+}
+
+.modalImage {
+    padding-left: 20px;
+}
+
+.scrollDesc {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
 }

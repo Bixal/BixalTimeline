@@ -4,17 +4,15 @@ import SmallCard from '../Card/SmallCard/SmallCard.jsx';
 
 // Timeline Components
 import Timeline from '@mui/lab/Timeline';
-import { withStyles } from '@mui/material';
-import { TimelineConnector, TimelineContent, TimelineSeparator } from '@mui/lab';
 
 export default function BixalTimeline({ value }) {
 
   // ORDER DATES IN CHRONOLOGICAL ORDER
   let newData = []
-  value.map(({id, date, title, desc, photo, contentType}) => {
+  value.map(({id, date, title, summary, desc, photo, contentType}) => {
 
       let newDate = new Date(date)
-      let newDateData = {id, newDate, title, desc, photo, contentType}
+      let newDateData = {id, newDate, title, summary, desc, photo, contentType}
       newData.push(newDateData)
       newData.sort(function(a, b){
           return a.newDate - b.newDate
@@ -25,7 +23,7 @@ export default function BixalTimeline({ value }) {
   // RETURN AS TIMELINE COMPONENT
   return (<>
     <Timeline position="alternate">
-      {newData.map(({id, newDate, title, desc, photo, contentType}) => {
+      {newData.map(({id, newDate, title, summary, desc, photo, contentType}) => {
         let milestoneType = contentType.value
         if (milestoneType === "large"){
           return (
@@ -33,7 +31,8 @@ export default function BixalTimeline({ value }) {
             key = {id}
             id = {id} 
             newDate = {newDate} 
-            title = {title} 
+            title = {title}
+            summary = {summary} 
             desc = {desc} 
             photo = {photo} 
             contentType = {contentType}
