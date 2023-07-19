@@ -32,11 +32,10 @@ function App() {
   if (!responseData) return null;
 
   return (
-    <>
-    <h1 className='tlTitle'>Bixal</h1>
-    <h5></h5>
+    <div>
+      <h1 className='tlTitle'>Bixal</h1>
       <BixalTimeline value={responseData}/>
-    </>
+    </div>
   )
 }
 

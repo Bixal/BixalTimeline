@@ -1,13 +1,11 @@
 import React from "react";
 import './SmallCard.css'
 
-// TIMELINE COMPONENT
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineDot from '@mui/lab/TimelineDot';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import { TimelineOppositeContent } from "@mui/lab";
+//ACCORDIAN COMPONENT
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function SmallCard({id, newDate, title, desc, photo}) {
     let oldDate = new Date(newDate)
@@ -17,20 +15,20 @@ export default function SmallCard({id, newDate, title, desc, photo}) {
     
     return(<>
     <div className="v_line"/>
-    <TimelineItem key={id} className="scContent">
-        <TimelineOppositeContent display={"flex"} alignItems={"center"}>
+    <Accordion className="smallAccordion">
+        <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
             <div>
                 <p>{reformattedDate}</p>
                 <h2>{title}</h2>
-                <p>{desc}</p>
             </div>
-        </TimelineOppositeContent>
-        <TimelineContent>                                
-        {photo.map(({url}) => {
-            return (
-                <img key={id} src={url} className="small-card"/>)
-            })}
-        </TimelineContent>
-    </TimelineItem>
+        </AccordionSummary>
+        <AccordionDetails>
+            <p className="accordDesc">{desc}</p>
+            {photo.map(({url}) => {
+                return (
+                    <img key={id} src={url} className="small-card"/>)
+                })}
+        </AccordionDetails>
+    </Accordion>
     </>)
 }
