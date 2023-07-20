@@ -1,0 +1,10 @@
+.headerLogo {
+    width: 20%;
+    padding: 50px;
+}
+
+.MuiToolbar-root {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}

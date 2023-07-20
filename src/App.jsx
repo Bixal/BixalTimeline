@@ -3,6 +3,7 @@ import { useState } from 'react'
 import './App.css'
 import axios from 'axios'
 import BixalTimeline from './components/Timeline/BixalTimeline'
+import Header from './components/Header/Header'
 
 
 // Font from Material UI
@@ -10,9 +11,6 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-
-
-
 
 
 function App() {
@@ -32,10 +30,10 @@ function App() {
   if (!responseData) return null;
 
   return (
-    <div>
-      <h1 className='tlTitle'>Bixal</h1>
-      <BixalTimeline value={responseData}/>
-    </div>
+    <>
+    <Header/>
+    <BixalTimeline value={responseData}/>
+    </>
   )
 }
 

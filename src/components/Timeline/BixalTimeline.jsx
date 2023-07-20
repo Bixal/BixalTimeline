@@ -5,6 +5,7 @@ import SmallCard from '../Card/SmallCard/SmallCard.jsx';
 // Timeline Components
 import Timeline from '@mui/lab/Timeline';
 
+
 export default function BixalTimeline({ value }) {
 
   // ORDER DATES IN CHRONOLOGICAL ORDER

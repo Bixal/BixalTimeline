@@ -31,9 +31,10 @@ export default function LargeCard({id, newDate, title, summary, desc, photo}) {
 
     return(<>
     <div className="v_line"/>
+
     <TimelineItem key={id}>
         <TimelineContent>                                
-            <Card>
+            <Card elevation={4}>
                 <CardContent>
                     <div className="lcContent">
                         <Typography variant="h4">
