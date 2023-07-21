@@ -1,12 +1,12 @@
 #root {
     padding: 0;
-    margin: 0 auto;
     max-width: 100%;
     width: 100%;
 }
 
 body {
     background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
 }
 
 .MuiTimelineItem-root:before {
@@ -14,45 +14,37 @@ body {
 }
 
 .MuiTimeline-root {
-    width: 65%;
-    margin: 0 auto;
+    margin: 0 auto;  
 }
 
 .MuiTypography-root {
     align-items: left;
 }
 
-.MuiCardContent-root {
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(255, 255, 255);
+.MuiTypography-root.MuiTypography-h3 {
+    font-size: 1.5rem;
 }
 
-.MuiTimelineItem-root:nth-of-type(even) .MuiCardContent-root {
-    display: flex;
-    flex-direction: row-reverse;
-    text-align: left;
+.MuiTypography-root.MuiTypography-h4 {
+    font-size: 1rem;
+}
+
+.MuiTypography-root.MuiTypography-h5 {
+    font-size: 1rem;
 }
 
 .MuiTimelineItem-root:nth-of-type(even) .MuiCardContent-root{
     display: flex;
-    flex-direction: row-reverse;
+    flex-wrap: wrap;
     text-align: left;
-    justify-content: space-between;
 }
 
-.MuiTimelineItem-root:nth-of-type(even) .MuiCardContent-root .lcContent{
-    padding: 15px;
+.MuiCardMedia-root.MuiCardMedia-media.MuiCardMedia-img {
+    height: fit-content;
 }
 
-.lcContent {
-    width: 50%;
-}
-
-.scContent {
-    width: 50%;
-    margin: 0 auto;
-    background-color: rgb(245, 245, 245);
+.MuiCardActions-root.MuiCardActions-spacing {
+    padding-left: 0;
 }
 
 .cardImage {
@@ -63,13 +55,9 @@ body {
     font-size: 4em;
 }
 
-/* .title {
-    color: #7b1fa2
-} */
-
 .v_line {
     border-left: 2px solid #7b1fa2;
-    height: 75px;
+    height: 40px;
     margin: 20px auto;
     width: 2px;
 }
@@ -113,4 +101,248 @@ body {
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+/* TABLET SCREEN SIZES */
+@media (min-width: 750px) {
+    #root {
+        padding: 0;
+        margin: 0 auto;
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    body {
+        background-color: rgb(255, 255, 255);
+    }
+    
+    .MuiTimelineItem-root:before {
+        display: none;
+    }
+    
+    .MuiTimeline-root {
+        width: 65%;
+        margin: 0 auto;
+    }
+    
+    .MuiTypography-root {
+        align-items: left;
+    }
+    
+    .MuiCardContent-root {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        background-color: rgb(255, 255, 255);
+    }
+    
+    .MuiTimelineItem-root:nth-of-type(even) .MuiCardContent-root {
+        display: flex;
+        flex-direction: row-reverse;
+        text-align: left;
+    }
+    
+    .MuiTimelineItem-root:nth-of-type(even) .MuiCardContent-root{
+        display: flex;
+        flex-direction: row-reverse;
+        text-align: left;
+        justify-content: space-between;
+    }
+    
+    .MuiTimelineItem-root:nth-of-type(even) .MuiCardContent-root .lcContent{
+        padding: 15px;
+    }
+    
+    .lcContent {
+        width: 50%;
+    }
+    
+    .scContent {
+        width: 50%;
+        margin: 0 auto;
+        background-color: rgb(245, 245, 245);
+    }
+    
+    .cardImage {
+        align-self: center;
+    }
+    
+    .tlTitle {
+        font-size: 4em;
+    }
+    
+    .v_line {
+        border-left: 2px solid #7b1fa2;
+        height: 75px;
+        margin: 20px auto;
+        width: 2px;
+    }
+    
+    .modalContent {
+        width: auto;
+        height: 75%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 10px;
+        display: flex;
+    }
+    
+    .modalText {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+    
+    .modalTitle {
+        padding: 25px;
+        align-self: center;
+        text-align: center;
+    }
+    
+    .modalDesc {
+        display: flex;
+        padding: 20px;
+        height: 50%;
+        width: auto;
+    }
+    
+    .modalImage {
+        padding-left: 20px;
+    }
+    
+    .scrollDesc {
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}
+
+/* DESKTOP SCREEN SIZE */
+@media (min-width: 1100px) {
+    #root {
+        padding: 0;
+        margin: 0 auto;
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    body {
+        background-color: rgb(255, 255, 255);
+    }
+    
+    .MuiTimelineItem-root:before {
+        display: none;
+    }
+    
+    .MuiTimeline-root {
+        width: 65%;
+        margin: 0 auto;
+    }
+    
+    .MuiTypography-root {
+        align-items: left;
+    }
+
+    .MuiTypography-root.MuiTypography-h3 {
+        font-size: 3rem;
+    }
+
+    .MuiTypography-root.MuiTypography-h4 {
+        font-size: 2.125rem;
+    }
+
+    .MuiTypography-root.MuiTypography-h5 {
+        font-size: 1.5rem;
+    }
+    
+    .MuiCardContent-root {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        background-color: rgb(255, 255, 255);
+    }
+    
+    .MuiTimelineItem-root:nth-of-type(even) .MuiCardContent-root{
+        display: flex;
+        flex-direction: row-reverse;
+        text-align: left;
+        justify-content: space-between;
+    }
+    
+    .MuiTimelineItem-root:nth-of-type(even) .MuiCardContent-root .lcContent{
+        padding: 15px;
+    }
+
+    .MuiCardMedia-root.MuiCardMedia-media.MuiCardMedia-img {
+        height: 250px;
+    }
+    
+    .lcContent {
+        width: 50%;
+    }
+    
+    .scContent {
+        width: 50%;
+        margin: 0 auto;
+        background-color: rgb(245, 245, 245);
+    }
+    
+    .cardImage {
+        align-self: center;
+    }
+    
+    .tlTitle {
+        font-size: 4em;
+    }
+    
+    .v_line {
+        border-left: 2px solid #7b1fa2;
+        height: 75px;
+        margin: 20px auto;
+        width: 2px;
+    }
+    
+    .modalContent {
+        width: auto;
+        height: 75%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 10px;
+        display: flex;
+    }
+    
+    .modalText {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+    
+    .modalTitle {
+        padding: 25px;
+        align-self: center;
+        text-align: center;
+    }
+    
+    .modalDesc {
+        display: flex;
+        padding: 20px;
+        height: 50%;
+        width: auto;
+    }
+    
+    .modalImage {
+        padding-left: 20px;
+    }
+    
+    .scrollDesc {
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
 }
