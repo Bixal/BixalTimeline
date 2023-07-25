@@ -58,6 +58,7 @@ export default function LargeCard({id, newDate, title, summary, desc, photo}) {
                             >
                             <Card className="modalContent">
                                 <CardContent className="modalText"> 
+                                    <Button id="closeBtn" onClick={handleClose}>X</Button>   
                                     <div className="modalTitle">
                                     <Typography variant="h4">{reformattedDate}</Typography>
                                     <Typography variant="h2">{title}</Typography>
@@ -74,7 +75,7 @@ export default function LargeCard({id, newDate, title, summary, desc, photo}) {
                                             className="modalImage"
                                             />)
                                         })}
-                                    </div>                               
+                                    </div>                            
                                 </CardContent>
                             </Card>
                             </Modal>

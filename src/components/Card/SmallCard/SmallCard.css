@@ -13,6 +13,10 @@
     flex-direction: column;
 }
 
+.MuiPaper-root-MuiAccordion-root {
+    font-size: .5em;
+}
+
 .MuiAccordionDetails-root {
     display: flex;
     flex-direction: column;

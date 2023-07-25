@@ -1,12 +1,17 @@
 #root {
     padding: 0;
-    max-width: 100%;
     width: 100%;
+    overflow-x: hidden;
 }
 
 body {
     background-color: rgb(255, 255, 255);
+    width: 100%;
     overflow-x: hidden;
+}
+
+.MuiBox-root {
+    width: 100%;
 }
 
 .MuiTimelineItem-root:before {
@@ -31,6 +36,7 @@ body {
 
 .MuiTypography-root.MuiTypography-h5 {
     font-size: 1rem;
+    padding-top: 20px;
 }
 
 .MuiTimelineItem-root:nth-of-type(even) .MuiCardContent-root{
@@ -39,12 +45,24 @@ body {
     text-align: left;
 }
 
+.MuiTimeline-root.MuiTimeline-poisitionAlternate {
+    width: 100%;
+}
+
 .MuiCardMedia-root.MuiCardMedia-media.MuiCardMedia-img {
     height: fit-content;
 }
 
 .MuiCardActions-root.MuiCardActions-spacing {
     padding-left: 0;
+}
+
+.MuiCardContent-root.modalText{
+    padding: 0;
+}
+
+.MuiButtonBase-root.MuiButton-root {
+    color: #7b1fa2;
 }
 
 .cardImage {
@@ -62,9 +80,13 @@ body {
     width: 2px;
 }
 
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.modalContent {
+    height: 100%;
+}
+
 .modalContent {
-    width: auto;
-    height: 75%;
+    width: 100%;
+    height: auto;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -78,6 +100,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: start;
+    text-align: center;
 }
 
 .modalTitle {
@@ -86,21 +109,15 @@ body {
     text-align: center;
 }
 
+.modalTitle h2 {
+    font-size: 2.5em;
+    padding: 10px;
+}
+
 .modalDesc {
     display: flex;
-    padding: 20px;
-    height: 50%;
-    width: auto;
-}
-
-.modalImage {
-    padding-left: 20px;
-}
-
-.scrollDesc {
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
+    flex-direction: column-reverse;
+    padding: 30px;
 }
 
 /* TABLET SCREEN SIZES */
@@ -279,6 +296,10 @@ body {
     .MuiCardMedia-root.MuiCardMedia-media.MuiCardMedia-img {
         height: 250px;
     }
+
+    .MuiPaper-root-MuiCard-root {
+        height: 60%;
+    }
     
     .lcContent {
         width: 50%;
@@ -304,6 +325,10 @@ body {
         margin: 20px auto;
         width: 2px;
     }
+
+    .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.modalContent {
+        height: 70%;
+    }
     
     .modalContent {
         width: auto;
@@ -322,15 +347,20 @@ body {
         flex-direction: column;
         justify-content: start;
     }
+
+    .MuiTimelineItem-root:nth-of-type(even) .MuiCardContent-root .modalText {
+        justify-content: start;
+    }
     
     .modalTitle {
-        padding: 25px;
+        padding: 10px;
         align-self: center;
         text-align: center;
     }
     
     .modalDesc {
         display: flex;
+        flex-direction: row;
         padding: 20px;
         height: 50%;
         width: auto;
@@ -338,6 +368,11 @@ body {
     
     .modalImage {
         padding-left: 20px;
+    }
+
+    .modalTitle h2 {
+        font-size: 3.5em;
+        padding: 10px;
     }
     
     .scrollDesc {

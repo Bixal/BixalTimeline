@@ -5,9 +5,18 @@
 
 .MuiToolbar-root {
     display: flex;
+    width: 100%;
+    padding: 0px;
+    overflow-x: hidden;
     justify-content: center;
     background-color: rgb(255, 255, 255);
 }
+
+/* centers bixal logo */
+.MuiToolbar-root.MuiToolbar-gutters.MuiToolbar-regular {
+    padding: 0;
+}
+
 
 @media (min-width: 750px) {
     .headerLogo {
