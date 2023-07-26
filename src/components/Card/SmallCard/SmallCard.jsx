@@ -6,6 +6,7 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Typography } from "@mui/material";
 
 export default function SmallCard({id, newDate, title, desc, photo}) {
     let oldDate = new Date(newDate)
@@ -17,13 +18,13 @@ export default function SmallCard({id, newDate, title, desc, photo}) {
     <div className="v_line"/>
     <Accordion className="smallAccordion" elevation={2}>
         <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
-            <div>
-                <p>{reformattedDate}</p>
-                <h2>{title}</h2>
+            <div id="scAccordion">
+                <Typography variant="body1">{reformattedDate}</Typography>
+                <Typography variant="h5">{title}</Typography>
             </div>
         </AccordionSummary>
         <AccordionDetails>
-            <p className="accordDesc">{desc}</p>
+            <Typography variant="body1" className="accordDesc">{desc}</Typography>
             {photo.map(({url}) => {
                 return (
                     <img key={id} src={url} className="small-card"/>)

@@ -66,14 +66,21 @@ export default function LargeCard({id, newDate, title, summary, desc, photo}) {
                                     <div className="modalDesc">
                                     <Typography variant="h5" className="scrollDesc">{desc}</Typography>
                                     {photo.map(({url}) => {
-                                        return (
-                                            <CardMedia
-                                            key={id}
-                                            component="img"
-                                            image={url}
-                                            height="65%"
-                                            className="modalImage"
-                                            />)
+                                        console.log(photo)
+                                        if (photo.length > 1) {
+                                            {photo.map(({id, url}) => {
+                                                console.log(id, url)
+                                            })}
+                                        } else {
+                                            return (
+                                                <CardMedia
+                                                key={id}
+                                                component="img"
+                                                image={url}
+                                                height="65%"
+                                                className="modalImage"
+                                                />)
+                                        }
                                         })}
                                     </div>                            
                                 </CardContent>
