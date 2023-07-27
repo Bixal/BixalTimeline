@@ -21,8 +21,6 @@ export default function BixalTimeline({ value }) {
       
   })
 
-  console.log(newData)
-
   // RETURN AS TIMELINE COMPONENT
   return (<>
     <Timeline position="alternate">

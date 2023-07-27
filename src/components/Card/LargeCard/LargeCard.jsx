@@ -12,7 +12,6 @@ import { Card, CardActions, Button, CardContent, Typography, CardMedia} from '@m
 // MODALE COMPONENTS
 import { Modal } from '@mui/material';
 
-
 export default function LargeCard({id, newDate, title, summary, desc, photo}) {
     // Reformat date
     let oldDate = new Date(newDate)
@@ -67,20 +66,14 @@ export default function LargeCard({id, newDate, title, summary, desc, photo}) {
                                     <Typography variant="h5" className="scrollDesc">{desc}</Typography>
                                     {photo.map(({url}) => {
                                         console.log(photo)
-                                        if (photo.length > 1) {
-                                            {photo.map(({id, url}) => {
-                                                console.log(id, url)
-                                            })}
-                                        } else {
-                                            return (
-                                                <CardMedia
-                                                key={id}
-                                                component="img"
-                                                image={url}
-                                                height="65%"
-                                                className="modalImage"
-                                                />)
-                                        }
+                                        return (
+                                            <CardMedia
+                                            key={id}
+                                            component="img"
+                                            image={url}
+                                            height="70%"
+                                            className="modalImage"
+                                            />)
                                         })}
                                     </div>                            
                                 </CardContent>

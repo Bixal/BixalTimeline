@@ -1,6 +1,7 @@
 .small-card {
-    width: 300px;
-    height: auto;    
+    width: 100%;
+    height: auto;
+    padding: 10px;    
 }
 
 .smallAccordion {
@@ -23,6 +24,10 @@
     align-items: center;
     justify-content: space-around;
     text-align: left;
+}
+
+.MuiTypography-root.MuiTypography-body2 {
+    text-align: center;
 }
 
 @media (min-width: 750px) {
@@ -72,5 +77,14 @@
         align-items: center;
         justify-content: space-around;
         text-align: left;
+    }
+
+    .MuiTypography-root.MuiTypography-body2 {
+        font-size: 1.25em;
+        text-align: center;
+    }
+
+    .MuiTypography-root.MuiTypography-body1 {
+        font-size: 1.25em;
     }
 }

@@ -24,7 +24,7 @@ export default function SmallCard({id, newDate, title, desc, photo}) {
             </div>
         </AccordionSummary>
         <AccordionDetails>
-            <Typography variant="body1" className="accordDesc">{desc}</Typography>
+            <Typography variant="body2" className="accordDesc">{desc}</Typography>
             {photo.map(({url}) => {
                 return (
                     <img key={id} src={url} className="small-card"/>)

@@ -82,6 +82,8 @@ body {
 
 .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.modalContent {
     height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .modalContent {
@@ -110,14 +112,15 @@ body {
 }
 
 .modalTitle h2 {
-    font-size: 2.5em;
+    font-size: 2em;
     padding: 10px;
+    font-weight: 400;
 }
 
 .modalDesc {
     display: flex;
     flex-direction: column-reverse;
-    padding: 30px;
+    padding-inline: 30px;
 }
 
 /* TABLET SCREEN SIZES */
@@ -138,7 +141,7 @@ body {
     }
     
     .MuiTimeline-root {
-        width: 65%;
+        width: 80%;
         margin: 0 auto;
     }
     
@@ -153,14 +156,9 @@ body {
         background-color: rgb(255, 255, 255);
     }
     
-    .MuiTimelineItem-root:nth-of-type(even) .MuiCardContent-root {
-        display: flex;
-        flex-direction: row-reverse;
-        text-align: left;
-    }
-    
     .MuiTimelineItem-root:nth-of-type(even) .MuiCardContent-root{
         display: flex;
+        flex-wrap: nowrap;
         flex-direction: row-reverse;
         text-align: left;
         justify-content: space-between;
@@ -182,6 +180,7 @@ body {
     
     .cardImage {
         align-self: center;
+        width: 50%
     }
     
     .tlTitle {
@@ -193,6 +192,13 @@ body {
         height: 75px;
         margin: 20px auto;
         width: 2px;
+    }
+
+    .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.modalContent {
+        height: 90%;
+        width: 60%;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
     
     .modalContent {
@@ -211,10 +217,19 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: start;
+        height: fit-content;
+    }
+
+    .MuiTimelineItem-root:nth-of-type(even) .MuiCardContent-root .modalText {
+        justify-content: start;
+    }
+
+    .MuiTimelineItem-root:nth-of-type(even) .MuiCardContent-root .modalText {
+        justify-content: start;
     }
     
     .modalTitle {
-        padding: 25px;
+        padding: 10px;
         align-self: center;
         text-align: center;
     }
@@ -222,18 +237,13 @@ body {
     .modalDesc {
         display: flex;
         padding: 20px;
-        height: 50%;
-        width: auto;
-    }
-    
-    .modalImage {
-        padding-left: 20px;
-    }
-    
-    .scrollDesc {
         height: 100%;
-        overflow-x: hidden;
-        overflow-y: auto;
+    }
+
+    .modalTitle h2 {
+        font-size: 2em;
+        font-weight: 400;
+        padding: 10px;
     }
 }
 
@@ -278,7 +288,7 @@ body {
     .MuiCardContent-root {
         display: flex;
         flex-wrap: nowrap;
-        justify-content: space-between;
+        justify-content: space-evenly;
         background-color: rgb(255, 255, 255);
     }
     
@@ -286,7 +296,7 @@ body {
         display: flex;
         flex-direction: row-reverse;
         text-align: left;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
     
     .MuiTimelineItem-root:nth-of-type(even) .MuiCardContent-root .lcContent{
@@ -294,15 +304,16 @@ body {
     }
 
     .MuiCardMedia-root.MuiCardMedia-media.MuiCardMedia-img {
-        height: 250px;
+        height: 300px;
     }
 
     .MuiPaper-root-MuiCard-root {
         height: 60%;
     }
-    
+
     .lcContent {
         width: 50%;
+        padding: 15px;
     }
     
     .scContent {
@@ -313,6 +324,7 @@ body {
     
     .cardImage {
         align-self: center;
+        width: auto;
     }
     
     .tlTitle {
@@ -361,6 +373,7 @@ body {
     .modalDesc {
         display: flex;
         flex-direction: row;
+        align-items: center;
         padding: 20px;
         height: 50%;
         width: auto;
@@ -372,7 +385,11 @@ body {
 
     .modalTitle h2 {
         font-size: 3.5em;
-        padding: 10px;
+    }
+
+    .MuiTypography-root.MuiTypography-h5.scrollDesc {
+        width: 100%;
+        text-align: left;
     }
     
     .scrollDesc {
