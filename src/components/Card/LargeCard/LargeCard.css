@@ -36,13 +36,22 @@ body {
 
 .MuiTypography-root.MuiTypography-h5 {
     font-size: 1rem;
+}
+
+.MuiTypography-root.MuiTypography-h5.scrollDesc {
+    font-size: 1rem;
     padding-top: 20px;
+}
+
+.MuiCardContent-root {
+    background-color: #f6f6f6;
 }
 
 .MuiTimelineItem-root:nth-of-type(even) .MuiCardContent-root{
     display: flex;
     flex-wrap: wrap;
     text-align: left;
+    background-color: #f6f6f6;
 }
 
 .MuiTimeline-root.MuiTimeline-poisitionAlternate {
@@ -61,7 +70,25 @@ body {
     padding: 0;
 }
 
-.MuiButtonBase-root.MuiButton-root {
+.MuiButtonBase-root.MuiButton-root{
+    color: #7b1fa2;
+    justify-content: left;
+    padding: 5px;
+    font-size: 1em;;
+}
+
+.MuiButtonBase-root.MuiButton-root:hover{
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.MuiButtonBase-root.MuiButton-root:focus {
+    outline: none;
+}
+
+.moreBtn {
+    display: flex;
+    align-items: center;
     color: #7b1fa2;
 }
 
@@ -82,6 +109,7 @@ body {
 
 .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.modalContent {
     height: 100%;
+    background-color: #f6f6f6;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -93,7 +121,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
+    background-color: #f6f6f6;
     padding: 10px;
     display: flex;
 }
@@ -123,6 +151,10 @@ body {
     padding-inline: 30px;
 }
 
+button#closeBtn.MuiButtonBase-root.MuiButton-root {
+    justify-content: center;
+}
+
 /* TABLET SCREEN SIZES */
 @media (min-width: 750px) {
     #root {
@@ -148,12 +180,16 @@ body {
     .MuiTypography-root {
         align-items: left;
     }
+
+    .MuiTypography-root.MuiTypography-h5 {
+        font-size: 1rem;
+        padding-top: 20px;
+    }
     
     .MuiCardContent-root {
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
-        background-color: rgb(255, 255, 255);
     }
     
     .MuiTimelineItem-root:nth-of-type(even) .MuiCardContent-root{
@@ -197,6 +233,7 @@ body {
     .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.modalContent {
         height: 90%;
         width: 60%;
+        background-color: #f6f6f6;
         overflow-x: hidden;
         overflow-y: auto;
     }
@@ -208,7 +245,7 @@ body {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: white;
+        background-color: #f6f6f6;
         padding: 10px;
         display: flex;
     }
@@ -289,7 +326,6 @@ body {
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-evenly;
-        background-color: rgb(255, 255, 255);
     }
     
     .MuiTimelineItem-root:nth-of-type(even) .MuiCardContent-root{
@@ -297,10 +333,6 @@ body {
         flex-direction: row-reverse;
         text-align: left;
         justify-content: space-evenly;
-    }
-    
-    .MuiTimelineItem-root:nth-of-type(even) .MuiCardContent-root .lcContent{
-        padding: 15px;
     }
 
     .MuiCardMedia-root.MuiCardMedia-media.MuiCardMedia-img {
@@ -340,6 +372,7 @@ body {
 
     .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.modalContent {
         height: 70%;
+        background-color: #f6f6f6;
     }
     
     .modalContent {
@@ -349,7 +382,7 @@ body {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: white;
+        background-color: #f6f6f6;
         padding: 10px;
         display: flex;
     }

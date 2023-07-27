@@ -8,6 +8,7 @@ import TimelineContent from '@mui/lab/TimelineContent';
 
 // CARD COMPONENTS
 import { Card, CardActions, Button, CardContent, Typography, CardMedia} from '@mui/material'
+import ArticleSharpIcon from '@mui/icons-material/ArticleSharp';
 
 // MODALE COMPONENTS
 import { Modal } from '@mui/material';
@@ -33,7 +34,7 @@ export default function LargeCard({id, newDate, title, summary, desc, photo}) {
 
     <TimelineItem key={id}>
         <TimelineContent>                                
-            <Card elevation={4}>
+            <Card elevation={0}>
                 <CardContent>
                     <div className="lcContent">
                         <Typography variant="h4">
@@ -48,7 +49,10 @@ export default function LargeCard({id, newDate, title, summary, desc, photo}) {
                             {summary}
                         </Typography>
                         <CardActions>
-                            <Button onClick={handleOpen} color="secondary" variant="outlined">More</Button>
+                            <div className="moreBtn">
+                            <ArticleSharpIcon/>
+                            <Button onClick={handleOpen}>More</Button>
+                            </div>
                             <Modal
                             open={open}
                             onClose={handleClose}
@@ -64,7 +68,7 @@ export default function LargeCard({id, newDate, title, summary, desc, photo}) {
                                     </div>
                                     <div className="modalDesc">
                                     <Typography variant="h5" className="scrollDesc">{desc}</Typography>
-                                    {photo.map(({url}) => {
+                                    {photo.map(({id, url}) => {
                                         console.log(photo)
                                         return (
                                             <CardMedia
@@ -82,15 +86,15 @@ export default function LargeCard({id, newDate, title, summary, desc, photo}) {
                         </CardActions>
                     </div>
                     <div className="cardImage">
-                        {photo.map(({url}) => {
-                            return (
-                                <CardMedia
-                                key={id}
-                                component="img"
-                                image={url}
-                                height="250px"
-                                />)
-                            })}
+                    {photo.map(({id, url}) => {
+                        return (
+                            <CardMedia
+                            key={id}
+                            component="img"
+                            image={url}
+                            height="250px"
+                            />)
+                    })}
                     </div>
                 </CardContent>
             </Card>

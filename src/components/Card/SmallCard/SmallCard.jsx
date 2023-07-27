@@ -16,11 +16,11 @@ export default function SmallCard({id, newDate, title, desc, photo}) {
     
     return(<>
     <div className="v_line"/>
-    <Accordion className="smallAccordion" elevation={2}>
-        <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+    <Accordion className="smallAccordion" elevation={1}>
+        <AccordionSummary expandIcon={<ExpandMoreIcon/>} aria-controls="panel1a-content" id="panel1a-header">
             <div id="scAccordion">
                 <Typography variant="body1">{reformattedDate}</Typography>
-                <Typography variant="h5">{title}</Typography>
+                <Typography variant="h6">{title}</Typography>
             </div>
         </AccordionSummary>
         <AccordionDetails>
