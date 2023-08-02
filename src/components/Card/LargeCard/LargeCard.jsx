@@ -13,7 +13,7 @@ import ArticleSharpIcon from '@mui/icons-material/ArticleSharp';
 // MODALE COMPONENTS
 import { Modal } from '@mui/material';
 
-export default function LargeCard({id, newDate, title, summary, desc, photo}) {
+export default function LargeCard({id, newDate, title, summary, desc, photoData}) {
     // Reformat date
     let oldDate = new Date(newDate)
     let oldDateMonth = oldDate.toLocaleDateString("default", {month:'long'})
@@ -68,17 +68,16 @@ export default function LargeCard({id, newDate, title, summary, desc, photo}) {
                                     </div>
                                     <div className="modalDesc">
                                     <Typography variant="h5" className="scrollDesc">{desc}</Typography>
-                                    {photo.map(({id, url}) => {
-                                        console.log(photo)
-                                        return (
+                                    {photoData.map(({photoId, url}) => {
+                                        return(
                                             <CardMedia
-                                            key={id}
+                                            key={photoId}
                                             component="img"
                                             image={url}
                                             height="70%"
                                             className="modalImage"
                                             />)
-                                        })}
+                                    })}
                                     </div>                            
                                 </CardContent>
                             </Card>
@@ -86,10 +85,11 @@ export default function LargeCard({id, newDate, title, summary, desc, photo}) {
                         </CardActions>
                     </div>
                     <div className="cardImage">
-                    {photo.map(({id, url}) => {
-                        return (
+                    {photoData.map(({photoId, url}) => {
+                        return(
+                            photoId === 0 &&
                             <CardMedia
-                            key={id}
+                            key={photoId}
                             component="img"
                             image={url}
                             height="250px"

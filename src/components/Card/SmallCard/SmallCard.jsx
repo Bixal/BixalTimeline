@@ -8,7 +8,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Typography } from "@mui/material";
 
-export default function SmallCard({id, newDate, title, desc, photo}) {
+export default function SmallCard({id, newDate, title, desc, photoData}) {
     let oldDate = new Date(newDate)
     let oldDateMonth = oldDate.toLocaleDateString("default", {month:'long'})
     let oldDateYear = oldDate.toLocaleDateString("default", {year:'numeric'})
@@ -25,9 +25,9 @@ export default function SmallCard({id, newDate, title, desc, photo}) {
         </AccordionSummary>
         <AccordionDetails>
             <Typography variant="body2" className="accordDesc">{desc}</Typography>
-            {photo.map(({url}) => {
+            {photoData.map(({photoId, url}) => {
                 return (
-                    <img key={id} src={url} className="small-card"/>)
+                    <img key={photoId} src={url} className="small-card"/>)
                 })}
         </AccordionDetails>
     </Accordion>
