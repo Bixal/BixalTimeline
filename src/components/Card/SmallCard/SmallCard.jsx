@@ -8,7 +8,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Typography } from "@mui/material";
 
-export default function SmallCard({id, newDate, title, desc, photoData}) {
+export default function SmallCard({id, newDate, title, desc, photoData, video}) {
     let oldDate = new Date(newDate)
     let oldDateMonth = oldDate.toLocaleDateString("default", {month:'long'})
     let oldDateYear = oldDate.toLocaleDateString("default", {year:'numeric'})

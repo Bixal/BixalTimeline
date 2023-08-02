@@ -13,7 +13,7 @@ import ArticleSharpIcon from '@mui/icons-material/ArticleSharp';
 // MODALE COMPONENTS
 import { Modal } from '@mui/material';
 
-export default function LargeCard({id, newDate, title, summary, desc, photoData}) {
+export default function LargeCard({id, newDate, title, summary, desc, photoData, video}) {
     // Reformat date
     let oldDate = new Date(newDate)
     let oldDateMonth = oldDate.toLocaleDateString("default", {month:'long'})
@@ -78,7 +78,16 @@ export default function LargeCard({id, newDate, title, summary, desc, photoData}
                                             className="modalImage"
                                             />)
                                     })}
-                                    </div>                            
+                                    </div>
+                                    <iframe 
+                                        width="560" 
+                                        height="315" 
+                                        src={video}
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        allowfullscreen
+                                    />
                                 </CardContent>
                             </Card>
                             </Modal>

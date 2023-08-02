@@ -10,7 +10,7 @@ export default function BixalTimeline({ value }) {
 
   // ORDER DATES IN CHRONOLOGICAL ORDER
   let newData = []
-  value.map(({id, date, title, summary, desc, photo, contentType}) => {
+  value.map(({id, date, title, summary, desc, photo, video, contentType}) => {
 
       let photoId = 0
       let photoData = []
@@ -28,28 +28,12 @@ export default function BixalTimeline({ value }) {
         })
       }
       let newDate = new Date(date)
-      let newDateData = {id, newDate, title, summary, desc, photoData, contentType}
+      let newDateData = {id, newDate, title, summary, desc, photoData, video, contentType}
       newData.push(newDateData)
 
       newData.sort(function(a, b){
         return a.newDate - b.newDate
       })
-
-    // let newDate = new Date(date)
-    // if (photo.length > 1) {
-    //   photo.map(({url}) => {
-    //     let photoId = Math.random() * 0x10
-    //     let newDateData = {id, newDate, title, summary, desc, photoId, url, contentType}
-    //     newData.push(newDateData)
-    //   })
-    // } else {
-    //   let newDateData = {id, newDate, title, summary, desc, photo, contentType}
-    //   newData.push(newDateData)
-    // }
-    // newData.sort(function(a, b){
-    //     return a.newDate - b.newDate
-    // })
-      
   })
 
   console.log(newData)
@@ -57,7 +41,7 @@ export default function BixalTimeline({ value }) {
   // RETURN AS TIMELINE COMPONENT
   return (<>
     <Timeline position="alternate">
-      {newData.map(({id, newDate, title, summary, desc, photoId, url, photoData, contentType}) => {
+      {newData.map(({id, newDate, title, summary, desc, photoData, video, contentType}) => {
         let milestoneType = contentType.value
         if (milestoneType === "large"){
           return (
@@ -68,7 +52,8 @@ export default function BixalTimeline({ value }) {
             title = {title}
             summary = {summary} 
             desc = {desc}
-            photoData = {photoData} 
+            photoData = {photoData}
+            video = {video} 
             contentType = {contentType}
             />)
         } else if (milestoneType === "small") {
@@ -79,7 +64,8 @@ export default function BixalTimeline({ value }) {
             newDate = {newDate} 
             title = {title} 
             desc = {desc}
-            photoData = {photoData} 
+            photoData = {photoData}
+            video = {video} 
             contentType = {contentType}/>)
         }
       })}
