@@ -29,6 +29,15 @@ export default function LargeCard({id, newDate, title, summary, desc, photoData,
         setOpen(false);
     }
 
+    // Open and close child modal
+    const [openPhoto, setOpenPhoto] = useState(false)
+    function handleOpenPhoto() {
+        setOpenPhoto(true);
+    }
+    function handleClosePhoto() {
+        setOpenPhoto(false);
+    }
+
     return(<>
     <div className="v_line"/>
 
@@ -71,14 +80,36 @@ export default function LargeCard({id, newDate, title, summary, desc, photoData,
                                         <div className="modalWrap">
                                         <div className="modalPhotos">
                                         {photoData.map(({photoId, url}) => {
-                                            return(
-                                                <a href={url}><CardMedia
-                                                key={photoId}
-                                                component="img"
-                                                image={url}
-                                                height="70%"
-                                                className="modalImage"
-                                                /></a>)
+                                            return(<>
+                                                <button onClick={handleOpenPhoto}>
+                                                    <CardMedia
+                                                    key={photoId}
+                                                    component="img"
+                                                    image={url}
+                                                    height="70%"
+                                                    className="modalImage"
+                                                    />
+                                                </button>
+                                                <Modal
+                                                    open={openPhoto}
+                                                    onClose={handleClosePhoto}
+                                                    aria-labelledby="child-modal-title"
+                                                    aria-describedby="child-modal-description"
+                                                    className="childModal"
+                                                >
+                                                    <Card onClick={handleClosePhoto} className="childModalCard">
+                                                        <CardContent className="childModalContent">
+                                                            <Button id="closeBtn" onClick={handleClosePhoto}>X</Button>
+                                                            <CardMedia
+                                                            key={photoId}
+                                                            component="img"
+                                                            image={url}
+                                                            className="childModalPhoto"
+                                                            />
+                                                        </CardContent>
+                                                    </Card>
+                                                </Modal>
+                                            </>)
                                         })}
                                         </div>
                                         </div>

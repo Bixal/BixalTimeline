@@ -152,9 +152,19 @@ body {
 }
 
 button#closeBtn.MuiButtonBase-root.MuiButton-root {
+    width: 100%;
     justify-content: right;
     padding-right: 10px;
     font-size: 1em;
+}
+
+.MuiModal-root.childModal{
+    display: flex;
+    align-items: center;
+}
+
+.MuiModal-root.childModalCard {
+    height: 50%;
 }
 
 /* TABLET SCREEN SIZES */
@@ -300,6 +310,21 @@ button#closeBtn.MuiButtonBase-root.MuiButton-root {
         font-size: 2em;
         font-weight: 400;
         padding: 10px;
+    }
+
+    .MuiCard-root.childModalCard {
+        height: 80%;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .childModalContent {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .MuiCardMedia-root.childModalPhoto {
+        width: 100%;
     }
 }
 
@@ -454,5 +479,26 @@ button#closeBtn.MuiButtonBase-root.MuiButton-root {
         height: 100%;
         overflow-x: hidden;
         overflow-y: auto;
+    }
+
+    .childModalContent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .MuiCard-root.childModalCard {
+        height: 90%;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .MuiCardContent-root.childModalContent {
+        height: 100%;
+    }
+
+    .MuiCardMedia-root.MuiCardMedia-media.MuiCardMedia-img.childModalPhoto {
+        width: 100%;
+        height: fit-content;
+        align-self: center;
     }
 }
