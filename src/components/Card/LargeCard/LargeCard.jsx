@@ -68,18 +68,22 @@ export default function LargeCard({id, newDate, title, summary, desc, photoData,
                                     </div>
                                     <div className="modalDesc">
                                     <Typography variant="h5" className="scrollDesc">{desc}</Typography>
-                                    {photoData.map(({photoId, url}) => {
-                                        return(
-                                            <CardMedia
-                                            key={photoId}
-                                            component="img"
-                                            image={url}
-                                            height="70%"
-                                            className="modalImage"
-                                            />)
-                                    })}
+                                        <div className="modalWrap">
+                                        <div className="modalPhotos">
+                                        {photoData.map(({photoId, url}) => {
+                                            return(
+                                                <a href={url}><CardMedia
+                                                key={photoId}
+                                                component="img"
+                                                image={url}
+                                                height="70%"
+                                                className="modalImage"
+                                                /></a>)
+                                        })}
+                                        </div>
+                                        </div>
                                     </div>
-                                    <iframe 
+                                    {/* <iframe 
                                         width="560" 
                                         height="315" 
                                         src={video}
@@ -87,7 +91,7 @@ export default function LargeCard({id, newDate, title, summary, desc, photoData,
                                         frameborder="0" 
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                         allowfullscreen
-                                    />
+                                    /> */}
                                 </CardContent>
                             </Card>
                             </Modal>
