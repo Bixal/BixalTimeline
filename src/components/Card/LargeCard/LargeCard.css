@@ -554,7 +554,7 @@ button.openChildModalBtn:hover {
     }
 
     /* GRID TEST */
-    /* .modalDescText {
+    .modalDescText {
         grid-area: header;
     }
 
@@ -573,5 +573,5 @@ button.openChildModalBtn:hover {
 
     .grid-container > div {
         text-align: center;
-    } */
+    }
 }
