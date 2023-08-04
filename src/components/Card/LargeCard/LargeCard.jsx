@@ -60,7 +60,7 @@ export default function LargeCard({id, newDate, title, summary, desc, photoData,
                         <CardActions>
                             <div className="moreBtn">
                             <ArticleSharpIcon/>
-                            <Button onClick={handleOpen}>More</Button>
+                            <Button onClick={handleOpen} className="moreText">More</Button>
                             </div>
                             <Modal
                             open={open}

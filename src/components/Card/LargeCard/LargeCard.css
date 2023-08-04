@@ -56,12 +56,12 @@ body {
 }
 
 /* TESTING TESTING TESTING */
-/* .MuiTimelineItem-root:nth-child(3n+0) .MuiCardContent-root {
+.MuiTimelineItem-root:nth-child(3n+0) .MuiCardContent-root {
     background-color: #bee9f6;
     color: #55052a;
 }
 
-.MuiTimelineItem-root:nth-child(3n-1) .MuiCardContent-root {
+.MuiTimelineItem-root:nth-child(3n-1) .MuiCardContent-root{
     background-color: #deec1e;
     color: #172d6a;
 }
@@ -69,7 +69,7 @@ body {
 .MuiTimelineItem-root:nth-child(3n-2) .MuiCardContent-root {
     background-color: #fda305;
     color: #172d6a
-} */
+}
 
 /* TESTING TESTING TESTING */
 
@@ -90,8 +90,8 @@ body {
     padding: 0;
 }
 
-.MuiButtonBase-root.MuiButton-root{
-    color: #7b1fa2;
+.MuiButtonBase-root.MuiButton-root {
+    color: #7d0096;
     justify-content: right;
     padding: 5px;
     font-size: 1em;;
@@ -109,7 +109,7 @@ body {
 .moreBtn {
     display: flex;
     align-items: center;
-    color: #7b1fa2;
+    color: #7d0096;
 }
 
 .cardImage {
@@ -121,7 +121,7 @@ body {
 }
 
 .v_line {
-    border-left: 2px solid #7b1fa2;
+    border-left: 2px solid #7d0096;
     height: 40px;
     margin: 20px auto;
     width: 2px;
@@ -296,7 +296,7 @@ button.openChildModalBtn:hover {
     }
     
     .v_line {
-        border-left: 2px solid #7b1fa2;
+        border-left: 2px solid #7d0096;
         height: 75px;
         margin: 20px auto;
         width: 2px;
@@ -464,7 +464,7 @@ button.openChildModalBtn:hover {
     }
     
     .v_line {
-        border-left: 2px solid #7b1fa2;
+        border-left: 2px solid #7d0096;
         height: 75px;
         margin: 20px auto;
         width: 2px;
