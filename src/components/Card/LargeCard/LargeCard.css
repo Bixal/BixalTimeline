@@ -552,4 +552,26 @@ button.openChildModalBtn:hover {
         height: fit-content;
         align-self: center;
     }
+
+    /* GRID TEST */
+    /* .modalDescText {
+        grid-area: header;
+    }
+
+    .modalDescPhoto {
+        grid-area: main;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+        'header header header'
+        'main main main';
+        gap: 10px;
+
+    }
+
+    .grid-container > div {
+        text-align: center;
+    } */
 }

@@ -75,20 +75,20 @@ export default function LargeCard({id, newDate, title, summary, desc, photoData,
                                     <Typography variant="h4">{reformattedDate}</Typography>
                                     <Typography variant="h2">{title}</Typography>
                                     </div>
-                                    <hr className="splitLineOrange"/>
-                                    <div className="modalDesc">
-                                    <Typography variant="h5" className="scrollDesc">{desc}</Typography>
+                                    <div className="modalDesc grid-container">
+                                    <Typography variant="h5" className="scrollDesc modalDescText">{desc}</Typography>
                                         {photoData.map(({photoId, url}) => {
                                             return(<>
-                                                <button onClick={handleOpenPhoto} className="openChildModalBtn">
+                                                <div className="modalImage">
+                                                <button onClick={handleOpenPhoto} className="openChildModalBtn modalDescPhoto">
                                                     <CardMedia
                                                     key={photoId}
                                                     component="img"
                                                     image={url}
                                                     height="70%"
-                                                    className="modalImage"
                                                     />
                                                 </button>
+                                                </div>
                                                 <Modal
                                                     open={openPhoto}
                                                     onClose={handleClosePhoto}
