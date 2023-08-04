@@ -1,6 +1,7 @@
 import React from "react";
 import './LargeCard.css'
 import { useState } from "react";
+import ReactPlayer from "react-player";
 
 // TIMELINE COMPONENT
 import TimelineItem from '@mui/lab/TimelineItem';
@@ -20,7 +21,7 @@ export default function LargeCard({id, newDate, title, summary, desc, photoData,
     let oldDateYear = oldDate.toLocaleDateString("default", {year:'numeric'})
     let reformattedDate = oldDateMonth + " " + oldDateYear
 
-    // Open and close modal
+    // Open and close modal (timeline content)
     const [open, setOpen] = useState(false)
     function handleOpen() {
         setOpen(true);
@@ -29,7 +30,7 @@ export default function LargeCard({id, newDate, title, summary, desc, photoData,
         setOpen(false);
     }
 
-    // Open and close child modal
+    // Open and close child modal (image)
     const [openPhoto, setOpenPhoto] = useState(false)
     function handleOpenPhoto() {
         setOpenPhoto(true);
@@ -53,7 +54,6 @@ export default function LargeCard({id, newDate, title, summary, desc, photoData,
                         <Typography variant='h3' className="title">
                             {title}
                         </Typography>
-                        <br />
                         <Typography variant="h5">
                             {summary}
                         </Typography>
@@ -75,13 +75,12 @@ export default function LargeCard({id, newDate, title, summary, desc, photoData,
                                     <Typography variant="h4">{reformattedDate}</Typography>
                                     <Typography variant="h2">{title}</Typography>
                                     </div>
+                                    <hr className="splitLineOrange"/>
                                     <div className="modalDesc">
                                     <Typography variant="h5" className="scrollDesc">{desc}</Typography>
-                                        <div className="modalWrap">
-                                        <div className="modalPhotos">
                                         {photoData.map(({photoId, url}) => {
                                             return(<>
-                                                <button onClick={handleOpenPhoto}>
+                                                <button onClick={handleOpenPhoto} className="openChildModalBtn">
                                                     <CardMedia
                                                     key={photoId}
                                                     component="img"
@@ -111,18 +110,11 @@ export default function LargeCard({id, newDate, title, summary, desc, photoData,
                                                 </Modal>
                                             </>)
                                         })}
-                                        </div>
-                                        </div>
                                     </div>
-                                    {/* <iframe 
-                                        width="560" 
-                                        height="315" 
-                                        src={video}
-                                        title="YouTube video player" 
-                                        frameborder="0" 
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                        allowfullscreen
-                                    /> */}
+                                    <div className="videoPlayer">
+                                        <hr className="splitLine"/>
+                                        <ReactPlayer url={video} className="video"/>
+                                    </div>
                                 </CardContent>
                             </Card>
                             </Modal>

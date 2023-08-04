@@ -45,6 +45,7 @@ body {
 
 .MuiCardContent-root {
     background-color: #f6f6f6;
+    border-radius: 10px;
 }
 
 .MuiTimelineItem-root:nth-of-type(even) .MuiCardContent-root{
@@ -54,12 +55,31 @@ body {
     background-color: #f6f6f6;
 }
 
+/* TESTING TESTING TESTING */
+/* .MuiTimelineItem-root:nth-child(3n+0) .MuiCardContent-root {
+    background-color: #bee9f6;
+    color: #55052a;
+}
+
+.MuiTimelineItem-root:nth-child(3n-1) .MuiCardContent-root {
+    background-color: #deec1e;
+    color: #172d6a;
+}
+
+.MuiTimelineItem-root:nth-child(3n-2) .MuiCardContent-root {
+    background-color: #fda305;
+    color: #172d6a
+} */
+
+/* TESTING TESTING TESTING */
+
 .MuiTimeline-root.MuiTimeline-poisitionAlternate {
     width: 100%;
 }
 
 .MuiCardMedia-root.MuiCardMedia-media.MuiCardMedia-img {
     height: fit-content;
+    border-radius: 10px;
 }
 
 .MuiCardActions-root.MuiCardActions-spacing {
@@ -158,6 +178,18 @@ button#closeBtn.MuiButtonBase-root.MuiButton-root {
     font-size: 1em;
 }
 
+button.openChildModalBtn {
+    border: none;
+    border-radius: 0px;
+    padding: 0px;
+}
+
+button.openChildModalBtn:hover {
+    border-color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
 .MuiModal-root.childModal{
     display: flex;
     align-items: center;
@@ -166,6 +198,29 @@ button#closeBtn.MuiButtonBase-root.MuiButton-root {
 .MuiModal-root.childModalCard {
     height: 50%;
 }
+
+.splitLine {
+    margin: 50px;
+    width: 75%;
+    border: 1px solid #06c5bc;
+  }
+
+.videoPlayer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.purpleFont {
+    color: #7d0096;
+}
+
+.mediumBlueFont {
+    color:#06c5bc;
+}
+
+
 
 /* TABLET SCREEN SIZES */
 @media (min-width: 750px) {
@@ -302,10 +357,6 @@ button#closeBtn.MuiButtonBase-root.MuiButton-root {
         padding: 20px
     }
 
-    .modalImage {
-        padding: 10px
-    }
-
     .modalTitle h2 {
         font-size: 2em;
         font-weight: 400;
@@ -313,7 +364,7 @@ button#closeBtn.MuiButtonBase-root.MuiButton-root {
     }
 
     .MuiCard-root.childModalCard {
-        height: 80%;
+        height: auto;
         width: 80%;
         margin: 0 auto;
     }
@@ -346,7 +397,7 @@ button#closeBtn.MuiButtonBase-root.MuiButton-root {
     }
     
     .MuiTimeline-root {
-        width: 65%;
+        width: 70%;
         margin: 0 auto;
     }
     
@@ -487,7 +538,7 @@ button#closeBtn.MuiButtonBase-root.MuiButton-root {
     }
 
     .MuiCard-root.childModalCard {
-        height: 90%;
+        height: auto;
         width: 60%;
         margin: 0 auto;
     }
