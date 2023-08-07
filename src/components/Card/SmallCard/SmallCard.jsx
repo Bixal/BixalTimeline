@@ -1,5 +1,6 @@
 import React from "react";
-import './SmallCard.css'
+import './SmallCard.css';
+import ChildModal from "../../Modal/ChildModal";
 
 //ACCORDIAN COMPONENT
 import Accordion from "@mui/material/Accordion";
@@ -25,10 +26,7 @@ export default function SmallCard({id, newDate, title, desc, photoData, video}) 
         </AccordionSummary>
         <AccordionDetails>
             <Typography variant="body2" className="accordDesc">{desc}</Typography>
-            {photoData.map(({photoId, url}) => {
-                return (
-                    <img key={photoId} src={url} className="small-card"/>)
-                })}
+            <ChildModal photoData={photoData}/>
         </AccordionDetails>
     </Accordion>
     </>)

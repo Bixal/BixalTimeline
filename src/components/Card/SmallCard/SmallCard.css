@@ -40,17 +40,17 @@
     font-weight: 500;
 }
 
-.MuiPaper-root-MuiAccordion-root {
+.MuiPaper-root.MuiAccordion-root:nth-child(3n+0) {
     background-color: #bee9f6;
     color: #55052a;
 }
 
-.MuiTimelineItem-root:nth-child(3n-1) .MuiCardContent-root{
+.MuiPaper-root.MuiAccordion-root:nth-child(3n-1) {
     background-color: #deec1e;
     color: #172d6a;
 }
 
-.MuiTimelineItem-root:nth-child(3n-2) .MuiCardContent-root {
+.MuiPaper-root.MuiAccordion-root:nth-child(3n-2) {
     background-color: #fda305;
     color: #172d6a
 }
