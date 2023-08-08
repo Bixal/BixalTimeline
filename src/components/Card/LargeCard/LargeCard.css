@@ -151,6 +151,7 @@ body {
     flex-direction: column;
     justify-content: start;
     text-align: center;
+    width: 100%;
 }
 
 .modalTitle {
@@ -219,8 +220,6 @@ button.openChildModalBtn:hover {
 .mediumBlueFont {
     color:#06c5bc;
 }
-
-
 
 /* TABLET SCREEN SIZES */
 @media (min-width: 750px) {
@@ -377,6 +376,11 @@ button.openChildModalBtn:hover {
     .MuiCardMedia-root.childModalPhoto {
         width: 100%;
     }
+
+    .react-player > video {
+        
+      }
+     
 }
 
 /* DESKTOP SCREEN SIZE */

@@ -73,7 +73,7 @@ export default function LargeCard({id, newDate, title, summary, desc, photoData,
                                     </div>
                                     <div className="videoPlayer">
                                         <hr className="splitLine"/>
-                                        <ReactPlayer url={video} className="video"/>
+                                        <ReactPlayer url={video} className="react-player"/>
                                     </div>
                                 </CardContent>
                             </Card>
