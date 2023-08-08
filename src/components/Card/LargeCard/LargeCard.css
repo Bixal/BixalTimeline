@@ -220,6 +220,9 @@ button.openChildModalBtn:hover {
 .mediumBlueFont {
     color:#06c5bc;
 }
+  .react-player {
+    max-width: 100%;
+  }
 
 /* TABLET SCREEN SIZES */
 @media (min-width: 750px) {
@@ -377,9 +380,10 @@ button.openChildModalBtn:hover {
         width: 100%;
     }
 
-    .react-player > video {
-        
-      }
+    .react-player {
+        width: 100%;
+        height: auto;
+    }
      
 }
 
@@ -555,6 +559,11 @@ button.openChildModalBtn:hover {
         width: 100%;
         height: fit-content;
         align-self: center;
+    }
+
+    .react-player {
+        max-width: 100%;
+        height: auto;
     }
 
     /* GRID TEST */
