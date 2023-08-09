@@ -71,10 +71,15 @@ export default function LargeCard({id, newDate, title, summary, desc, photoData,
                                     <Typography variant="h5" className="scrollDesc modalDescText">{desc}</Typography>
                                     <ChildModal photoData={photoData}/>
                                     </div>
-                                    <div className="videoPlayer">
-                                        <hr className="splitLine"/>
-                                        <ReactPlayer url={video} className="react-player"/>
-                                    </div>
+                                    {video ? 
+                                        <div className="videoPlayer">
+                                            <hr className="splitLine"/>
+                                            <ReactPlayer url={video} className="react-player"/>
+                                        </div> :
+                                        <div className="videoPlayer">
+                                            <hr className="splitLine"/>
+                                        </div>
+                                    }
                                 </CardContent>
                             </Card>
                             </Modal>
