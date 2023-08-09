@@ -47,7 +47,7 @@ export default function SmallCard({id, newDate, title, desc, photoData, video}) 
     
     return(<>
     <div className="v_line"/>
-    <Accordion className="smallAccordion" elevation={1}>
+    <Accordion className="smallAccordion" elevation={0}>
         <AccordionSummary expandIcon={<ExpandMoreIcon/>} aria-controls="panel1a-content" id="panel1a-header">
             <div id="scAccordion">
                 <Typography variant="body1">{reformattedDate}</Typography>

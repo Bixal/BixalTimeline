@@ -40,6 +40,11 @@
     font-weight: 500;
 }
 
+.MuiPaper-root.MuiAccordion-root {
+    border-radius: 20px;
+    position: static;
+}
+
 .MuiPaper-root.MuiAccordion-root:nth-child(3n+0) {
     background-color: #bee9f6;
     color: #55052a;
