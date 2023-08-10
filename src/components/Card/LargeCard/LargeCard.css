@@ -55,7 +55,6 @@ body {
     background-color: #f6f6f6;
 }
 
-/* TESTING TESTING TESTING */
 .MuiTimelineItem-root:nth-child(3n+0) .MuiCardContent-root {
     background-color: #bee9f6;
     color: #55052a;
@@ -70,8 +69,6 @@ body {
     background-color: #fda305;
     color: #172d6a
 }
-
-/* TESTING TESTING TESTING */
 
 .MuiTimeline-root.MuiTimeline-poisitionAlternate {
     width: 100%;
@@ -182,7 +179,7 @@ button#closeBtn.MuiButtonBase-root.MuiButton-root {
 button.openChildModalBtn {
     border: none;
     border-radius: 0px;
-    padding: 0px;
+    padding-top: 20px;
 }
 
 button.openChildModalBtn:hover {
