@@ -444,7 +444,9 @@ button.openChildModalBtn:hover {
     }
 
     .MuiCardMedia-root.MuiCardMedia-media.MuiCardMedia-img {
-        height: 300px;
+        height: 250px;
+        width: 300px;
+        padding: 10px;
     }
 
     .MuiPaper-root-MuiCard-root {
@@ -520,10 +522,10 @@ button.openChildModalBtn:hover {
         width: auto;
     }
 
-    .modalPhotos {
+    .modalImage {
         display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
+        justify-content: center;    
     }
 
     .modalTitle h2 {

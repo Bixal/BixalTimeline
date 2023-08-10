@@ -21,12 +21,11 @@ export default function ChildModal({photoData}) {
         setSelectedUrl(null);
     }
 
-    console.log(photoData)
-
     return(<>
+        <div className="modalImage">
         {photoData.map(({photoId, url}) => {
         return(
-            <div className="modalImage" key={photoId}>
+            <div key={photoId}>
             <button onClick={() => handleOpenPhoto(photoId, url)} className="openChildModalBtn modalDescPhoto">
                 <CardMedia
                 component="img"
@@ -36,6 +35,7 @@ export default function ChildModal({photoData}) {
             </button>
             </div>)
         })}
+        </div>
         <Modal
             open={openPhoto}
             onClose={handleClosePhoto}

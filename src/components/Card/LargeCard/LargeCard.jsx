@@ -69,8 +69,8 @@ export default function LargeCard({id, newDate, title, summary, desc, photoData,
                                     </div>
                                     <div className="modalDesc grid-container">
                                     <Typography variant="h5" className="scrollDesc modalDescText">{desc}</Typography>
-                                    <ChildModal photoData={photoData}/>
                                     </div>
+                                    <ChildModal photoData={photoData}/>
                                     {video ? 
                                         <div className="videoPlayer">
                                             <hr className="splitLine"/>
