@@ -9,7 +9,7 @@ import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineContent from '@mui/lab/TimelineContent';
 
 // CARD COMPONENTS
-import { Card, CardActions, Button, CardContent, Typography, CardMedia} from '@mui/material'
+import { Card, CardActions, Button, CardContent, Typography, CardMedia, IconButton} from '@mui/material'
 import ArticleSharpIcon from '@mui/icons-material/ArticleSharp';
 
 // MODALE COMPONENTS
@@ -74,7 +74,7 @@ export default function LargeCard({id, newDate, title, summary, desc, photoData,
                                     {video ? 
                                         <div className="videoPlayer">
                                             <hr className="splitLine"/>
-                                            <ReactPlayer url={video} className="react-player"/>
+                                            <ReactPlayer url={video} className="react-player" id="video"/>
                                         </div> :
                                         <div className="videoPlayer">
                                             <hr className="splitLine"/>

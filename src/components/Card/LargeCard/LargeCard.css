@@ -76,7 +76,7 @@ body {
 
 .MuiCardMedia-root.MuiCardMedia-media.MuiCardMedia-img {
     height: fit-content;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .MuiCardActions-root.MuiCardActions-spacing {
@@ -184,8 +184,9 @@ button.openChildModalBtn {
 
 button.openChildModalBtn:hover {
     border-color: white;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
     transition: box-shadow 0.3s ease-in-out;
+    border-radius: 20px;
 }
 
 .MuiModal-root.childModal{
@@ -217,9 +218,10 @@ button.openChildModalBtn:hover {
 .mediumBlueFont {
     color:#06c5bc;
 }
-  .react-player {
+
+.react-player {
     max-width: 100%;
-  }
+}
 
 /* TABLET SCREEN SIZES */
 @media (min-width: 750px) {
@@ -444,6 +446,7 @@ button.openChildModalBtn:hover {
         height: 250px;
         width: 300px;
         padding: 10px;
+        border-radius: 20px;
     }
 
     .MuiPaper-root-MuiCard-root {
