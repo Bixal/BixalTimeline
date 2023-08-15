@@ -10,7 +10,6 @@ import TimelineContent from '@mui/lab/TimelineContent';
 
 // CARD COMPONENTS
 import { Card, CardActions, Button, CardContent, Typography, CardMedia, IconButton} from '@mui/material'
-import ArticleSharpIcon from '@mui/icons-material/ArticleSharp';
 
 // MODALE COMPONENTS
 import { Modal } from '@mui/material';
@@ -20,7 +19,7 @@ export default function LargeCard({id, newDate, title, summary, desc, photoData,
     let oldDate = new Date(newDate)
     let oldDateMonth = oldDate.toLocaleDateString("default", {month:'long'})
     let oldDateYear = oldDate.toLocaleDateString("default", {year:'numeric'})
-    let reformattedDate = oldDateMonth + " " + oldDateYear
+    let reformattedDate = "|" + oldDateMonth + " " + oldDateYear + "|"
 
     // Open and close modal (timeline content)
     const [open, setOpen] = useState(false)
@@ -39,20 +38,19 @@ export default function LargeCard({id, newDate, title, summary, desc, photoData,
             <Card elevation={0}>
                 <CardContent>
                     <div className="lcContent">
-                        <Typography variant="h4">
+                        <Typography variant="h5" className="date">
                             {reformattedDate}
                         </Typography>
                         <br/>
-                        <Typography variant='h3' className="title">
+                        <Typography variant='h1' className="title">
                             {title}
                         </Typography>
-                        <Typography variant="h5">
+                        <Typography variant="h2">
                             {summary}
                         </Typography>
                         <CardActions>
                             <div className="moreBtn">
-                            <ArticleSharpIcon/>
-                            <Button onClick={handleOpen} className="moreText">More</Button>
+                            <Button onClick={handleOpen} className="moreText">Learn More</Button>
                             </div>
                             <Modal
                             open={open}
@@ -61,14 +59,14 @@ export default function LargeCard({id, newDate, title, summary, desc, photoData,
                             aria-describedby="modal-modal-description"
                             >
                             <Card className="modalContent">
-                                <CardContent className="modalText"> 
-                                    <Button id="closeBtn" onClick={handleClose}>X</Button>   
+                            <Button id="closeBtn" onClick={handleClose}>X</Button> 
+                                <CardContent className="modalText">   
                                     <div className="modalTitle">
-                                    <Typography variant="h4">{reformattedDate}</Typography>
-                                    <Typography variant="h2">{title}</Typography>
+                                    <Typography variant="h5" className="date">{reformattedDate}</Typography>
+                                    <Typography variant="h1">{title}</Typography>
                                     </div>
                                     <div className="modalDesc grid-container">
-                                    <Typography variant="h5" className="scrollDesc modalDescText">{desc}</Typography>
+                                    <Typography variant="body1" className="scrollDesc modalDescText">{desc}</Typography>
                                     </div>
                                     <ChildModal photoData={photoData}/>
                                     {video ? 

@@ -11,6 +11,7 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import { ThemeProvider, createTheme } from '@mui/material'
 
 
 function App() {
@@ -29,10 +30,42 @@ function App() {
 
   if (!responseData) return null;
 
+  const theme = createTheme({
+    typography: {
+      h1: {
+        fontSize: 55,
+        fontFamily: 'Georgia'
+      },
+      h2: {
+        fontSize: 35,
+        fontFamily: 'Helvetica'
+      },
+      h3: {
+        fontSize: 20,
+        fontFamily: 'Georgia'
+      },
+      h4: {
+        fontSize: 30,
+        fontFamily: 'Georgia'
+      },
+      h5: {
+        // fontSize: 20,
+        // fontFamily: 'Georgia'
+      },
+      body1: {
+        fontWeight: 500,
+        fontFamily: 'Helvetica'
+      },
+      
+    },
+  });
+
   return (
     <>
-    <Header/>
-    <BixalTimeline value={responseData}/>
+    <ThemeProvider theme={theme}>
+      <Header/>
+      <BixalTimeline value={responseData}/>
+    </ThemeProvider>
     </>
   )
 }

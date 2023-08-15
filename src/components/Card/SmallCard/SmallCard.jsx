@@ -26,7 +26,7 @@ export default function SmallCard({id, newDate, title, desc, photoData, video}) 
     let oldDate = new Date(newDate)
     let oldDateMonth = oldDate.toLocaleDateString("default", {month:'long'})
     let oldDateYear = oldDate.toLocaleDateString("default", {year:'numeric'})
-    let reformattedDate = oldDateMonth + " " + oldDateYear
+    let reformattedDate = "|" + oldDateMonth + " " + oldDateYear + "|"
 
     // Carousell Functions
     const theme = useTheme();
@@ -48,14 +48,15 @@ export default function SmallCard({id, newDate, title, desc, photoData, video}) 
     return(<>
     <div className="v_line"/>
     <Accordion className="smallAccordion" elevation={0}>
-        <AccordionSummary expandIcon={<ExpandMoreIcon/>} aria-controls="panel1a-content" id="panel1a-header">
+        <AccordionSummary aria-controls="panel1a-content" id="panel1a-header">
             <div id="scAccordion">
-                <Typography variant="body1">{reformattedDate}</Typography>
-                <Typography variant="h6">{title}</Typography>
+                <Typography variant="h3">{reformattedDate}</Typography>
+                <Typography variant="h4">{title}</Typography>
+                <Button className="moreText">Learn More</Button>
             </div>
         </AccordionSummary>
         <AccordionDetails>
-            <Typography variant="body2" className="accordDesc">{desc}</Typography>
+            <Typography variant="body1" className="accordDesc">{desc}</Typography>
             <ChildModal photoData={photoData}/>
             {/* <Box sx={{ maxWidth: 400, flexGrow: 1}}>
             <Paper

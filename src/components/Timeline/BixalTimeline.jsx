@@ -38,7 +38,7 @@ export default function BixalTimeline({ value }) {
 
   // RETURN AS TIMELINE COMPONENT
   return (<>
-    <Timeline position="alternate">
+    <Timeline position="left">
       {newData.map(({id, newDate, title, summary, desc, photoData, video, contentType}) => {
         let milestoneType = contentType.value
         if (milestoneType === "large"){

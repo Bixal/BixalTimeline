@@ -2,16 +2,17 @@
     padding: 0;
     width: 100%;
     overflow-x: hidden;
+    background-color: #bee9f6;
 }
 
 body {
-    background-color: rgb(255, 255, 255);
     width: 100%;
     overflow-x: hidden;
 }
 
 .MuiBox-root {
     width: 100%;
+    
 }
 
 .MuiTimelineItem-root:before {
@@ -19,14 +20,14 @@ body {
 }
 
 .MuiTimeline-root {
-    margin: 0 auto;  
+    margin: 0 auto;
 }
 
 .MuiTypography-root {
     align-items: left;
 }
 
-.MuiTypography-root.MuiTypography-h3 {
+/* .MuiTypography-root.MuiTypography-h3 {
     font-size: 1.5rem;
 }
 
@@ -36,26 +37,27 @@ body {
 
 .MuiTypography-root.MuiTypography-h5 {
     font-size: 1rem;
-}
+} */
 
 .MuiTypography-root.MuiTypography-h5.scrollDesc {
-    font-size: 1rem;
+    /* font-size: 1rem; */
     padding-top: 20px;
 }
 
 .MuiCardContent-root {
-    background-color: #f6f6f6;
-    border-radius: 10px;
+    background-color: #deec1e;
+    color: #172d6a;
 }
 
 .MuiTimelineItem-root:nth-of-type(even) .MuiCardContent-root{
     display: flex;
     flex-wrap: wrap;
     text-align: left;
-    background-color: #f6f6f6;
+    background-color: #deec1e;
+    color: #172d6a;
 }
 
-.MuiTimelineItem-root:nth-child(3n+0) .MuiCardContent-root {
+/* .MuiTimelineItem-root:nth-child(3n+0) .MuiCardContent-root {
     background-color: #bee9f6;
     color: #55052a;
 }
@@ -68,7 +70,7 @@ body {
 .MuiTimelineItem-root:nth-child(3n-2) .MuiCardContent-root {
     background-color: #fda305;
     color: #172d6a
-}
+} */
 
 .MuiTimeline-root.MuiTimeline-poisitionAlternate {
     width: 100%;
@@ -76,23 +78,32 @@ body {
 
 .MuiCardMedia-root.MuiCardMedia-media.MuiCardMedia-img {
     height: fit-content;
-    border-radius: 20px;
 }
 
 .MuiCardActions-root.MuiCardActions-spacing {
     padding-left: 0;
+    padding-top: 50px;
 }
 
 .MuiCardContent-root.modalText{
-    padding: 0;
+    padding: 0px;
 }
 
 .MuiButtonBase-root.MuiButton-root {
-    color: #7d0096;
-    justify-content: right;
+    color: #172d6a;
+    justify-content: center;
     padding: 5px;
-    font-size: 1em;;
+    border: 1px solid #172d6a;
+    border-radius: 0px;
+    padding-inline: 20px;
+    /* font-size: 1em;; */
 }
+
+#closeBtn.MuiButtonBase-root.MuiButton-root {
+    border: none;
+}
+
+
 
 .MuiButtonBase-root.MuiButton-root:hover{
     background-color: transparent;
@@ -103,22 +114,22 @@ body {
     outline: none;
 }
 
-.moreBtn {
+/* .moreBtn {
     display: flex;
     align-items: center;
     color: #7d0096;
-}
+} */
 
 .cardImage {
     align-self: center;
 }
 
-.tlTitle {
+/* .tlTitle {
     font-size: 4em;
-}
+} */
 
 .v_line {
-    border-left: 2px solid #7d0096;
+    border-left: 2px solid #172d6a;
     height: 40px;
     margin: 20px auto;
     width: 2px;
@@ -141,6 +152,7 @@ body {
     background-color: #f6f6f6;
     padding: 10px;
     display: flex;
+    flex-direction: column;
 }
 
 .modalText {
@@ -158,7 +170,7 @@ body {
 }
 
 .modalTitle h2 {
-    font-size: 2em;
+    /* font-size: 2em; */
     padding: 10px;
     font-weight: 400;
 }
@@ -173,20 +185,18 @@ button#closeBtn.MuiButtonBase-root.MuiButton-root {
     width: 100%;
     justify-content: right;
     padding-right: 10px;
-    font-size: 1em;
+    /* font-size: 1em; */
 }
 
 button.openChildModalBtn {
     border: none;
-    border-radius: 0px;
-    padding-top: 20px;
+    padding: 0px;
 }
 
 button.openChildModalBtn:hover {
     border-color: white;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
     transition: box-shadow 0.3s ease-in-out;
-    border-radius: 20px;
 }
 
 .MuiModal-root.childModal{
@@ -211,16 +221,18 @@ button.openChildModalBtn:hover {
     width: 100%;
 }
 
-.purpleFont {
-    color: #7d0096;
-}
-
-.mediumBlueFont {
-    color:#06c5bc;
-}
-
 .react-player {
     max-width: 100%;
+}
+
+/* .MuiTypography-root.MuiTypography-h4 {
+    padding-top: 30px;
+} */
+
+.MuiTypography-root.MuiTypography-body1 {
+    padding: 25px;
+    padding-inline: 75px;
+    text-align: left;
 }
 
 /* TABLET SCREEN SIZES */
@@ -247,15 +259,16 @@ button.openChildModalBtn:hover {
     
     .MuiTypography-root {
         align-items: left;
+        padding-bottom: 10px;
     }
 
     .MuiTypography-root.MuiTypography-h5 {
-        font-size: 1rem;
-        padding-top: 20px;
+        /* font-size: 1rem; */
+        /* padding-top: 20px; */
     }
 
     .MuiTypography-root.MuiTypography-h5.scrollDesc {
-        font-size: 1rem;
+        /* font-size: 1rem; */
         padding-top: 20px;
     }
     
@@ -268,7 +281,7 @@ button.openChildModalBtn:hover {
     .MuiTimelineItem-root:nth-of-type(even) .MuiCardContent-root{
         display: flex;
         flex-wrap: nowrap;
-        flex-direction: row-reverse;
+        flex-direction: row;
         text-align: left;
         justify-content: space-between;
     }
@@ -292,12 +305,11 @@ button.openChildModalBtn:hover {
         width: 50%
     }
     
-    .tlTitle {
+    /* .tlTitle {
         font-size: 4em;
-    }
+    } */
     
     .v_line {
-        border-left: 2px solid #7d0096;
         height: 75px;
         margin: 20px auto;
         width: 2px;
@@ -359,7 +371,7 @@ button.openChildModalBtn:hover {
     }
 
     .modalTitle h2 {
-        font-size: 2em;
+        /* font-size: 2em; */
         font-weight: 400;
         padding: 10px;
     }
@@ -377,11 +389,12 @@ button.openChildModalBtn:hover {
     
     .MuiCardMedia-root.childModalPhoto {
         width: 100%;
+        height: auto;
+        padding: 0;
     }
 
     .react-player {
         width: 100%;
-        height: auto;
     }
      
 }
@@ -412,22 +425,23 @@ button.openChildModalBtn:hover {
         align-items: left;
     }
 
-    .MuiTypography-root.MuiTypography-h3 {
-        font-size: 3rem;
-    }
+    /* .MuiTypography-root.MuiTypography-h3 {
+        font-size: 3.5rem;
+    } */
 
-    .MuiTypography-root.MuiTypography-h4 {
-        font-size: 2.125rem;
-    }
+    /* .MuiTypography-root.MuiTypography-h4 {
+        font-size: 1.5rem;
+        padding: 20px;
+    } */
 
-    .MuiTypography-root.MuiTypography-h5 {
+    /* .MuiTypography-root.MuiTypography-h5 {
         font-size: 1.5rem;
     }
 
     .MuiTypography-root.MuiTypography-h5.scrollDesc {
         font-size: 1.5rem;
-        padding-top: 20px;
-    }
+        padding: 20px;
+    } */
     
     .MuiCardContent-root {
         display: flex;
@@ -437,7 +451,6 @@ button.openChildModalBtn:hover {
     
     .MuiTimelineItem-root:nth-of-type(even) .MuiCardContent-root{
         display: flex;
-        flex-direction: row-reverse;
         text-align: left;
         justify-content: space-evenly;
     }
@@ -445,8 +458,6 @@ button.openChildModalBtn:hover {
     .MuiCardMedia-root.MuiCardMedia-media.MuiCardMedia-img {
         height: 250px;
         width: 300px;
-        padding: 10px;
-        border-radius: 20px;
     }
 
     .MuiPaper-root-MuiCard-root {
@@ -456,6 +467,7 @@ button.openChildModalBtn:hover {
     .lcContent {
         width: 50%;
         padding: 15px;
+        text-align: left;
     }
     
     .scContent {
@@ -469,12 +481,11 @@ button.openChildModalBtn:hover {
         width: auto;
     }
     
-    .tlTitle {
+    /* .tlTitle {
         font-size: 4em;
-    }
+    } */
     
     .v_line {
-        border-left: 2px solid #7d0096;
         height: 75px;
         margin: 20px auto;
         width: 2px;
@@ -482,7 +493,7 @@ button.openChildModalBtn:hover {
 
     .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.modalContent {
         height: 90%;
-        background-color: #f6f6f6;
+        background-color: #deec1e;
     }
     
     .modalContent {
@@ -525,12 +536,12 @@ button.openChildModalBtn:hover {
     .modalImage {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;    
+        justify-content: center;  
     }
 
-    .modalTitle h2 {
+    /* .modalTitle h2 {
         font-size: 3.5em;
-    }
+    } */
 
     .MuiTypography-root.MuiTypography-h5.scrollDesc {
         padding: 30px
