@@ -31,34 +31,155 @@ function App() {
   if (!responseData) return null;
 
   const theme = createTheme({
-    typography: {
-      h1: {
-        fontSize: 55,
-        fontFamily: 'Georgia'
+    breakpoints: {
+      values: {
+        mobile: 0,
+        tablet: 750,
+        laptop: 1100,
+        desktop: 1200,
       },
-      h2: {
-        fontSize: 35,
-        fontFamily: 'Helvetica'
-      },
-      h3: {
-        fontSize: 20,
-        fontFamily: 'Georgia'
-      },
-      h4: {
-        fontSize: 30,
-        fontFamily: 'Georgia'
-      },
-      h5: {
-        // fontSize: 20,
-        // fontFamily: 'Georgia'
-      },
-      body1: {
-        fontWeight: 500,
-        fontFamily: 'Helvetica'
-      },
-      
     },
-  });
+  })
+// Large Card Title; Modal Title
+  theme.typography.h1 = {
+    paddingTop: '20px',
+    fontFamily: 'Georgia',
+    fontWeight: 500,
+    [theme.breakpoints.only('mobile')]: {
+      fontSize: '2em',
+    },
+    [theme.breakpoints.only('tablet')]: {
+      fontSize: '2rem',
+    },
+    [theme.breakpoints.only('laptop')]: {
+      fontSize: '2.5em',
+    },
+    [theme.breakpoints.only('desktop')]: {
+      fontSize: '2.5em',
+    },
+};
+// Large Card Subtitle 
+  theme.typography.h2 = {
+    fontFamily: 'Helvetica',
+    fontWeight: 300,
+    [theme.breakpoints.only('mobile')]: {
+      fontSize: '1.5em',
+    },
+    [theme.breakpoints.only('tablet')]: {
+      fontSize: '1.5rem',
+    },
+    [theme.breakpoints.only('laptop')]: {
+      fontSize: '1.75em',
+    },
+    [theme.breakpoints.only('desktop')]: {
+      fontSize: '1.5em',
+    },
+  };
+// Small Card Date
+  theme.typography.h3 = {
+    fontFamily: 'Georgia',
+    fontWeight: 300,
+    [theme.breakpoints.only('mobile')]: {
+      fontSize: '.75em',
+    },
+    [theme.breakpoints.only('tablet')]: {
+      fontSize: '.8em',
+    },
+    [theme.breakpoints.only('laptop')]: {
+      fontSize: '1em',
+    },
+    [theme.breakpoints.only('desktop')]: {
+      fontSize: '1em',
+    },
+  };
+// Small Card Title
+  theme.typography.h4 = {
+    fontFamily: 'Georgia',
+    fontWeight: 300,
+    [theme.breakpoints.only('mobile')]: {
+      fontSize: '1.5em',
+    },
+    [theme.breakpoints.only('tablet')]: {
+      fontSize: '1.5rem',
+    },
+    [theme.breakpoints.only('laptop')]: {
+      fontSize: '2em',
+    },
+    [theme.breakpoints.only('desktop')]: {
+      fontSize: '2em',
+    },
+  };
+// Large Card Date; Modal Date
+  theme.typography.h5 = {
+    fontFamily: 'Georgia',
+    fontWeight: 300,
+    [theme.breakpoints.only('mobile')]: {
+      fontSize: '.75em',
+    },
+    [theme.breakpoints.only('tablet')]: {
+      fontSize: '.8em',
+    },
+    [theme.breakpoints.only('laptop')]: {
+      fontSize: '1em',
+    },
+    [theme.breakpoints.only('desktop')]: {
+      fontSize: '1em',
+    },
+  };
+  // Modal Description
+  theme.typography.body1 = {
+    fontFamily: 'Georgia',
+    fontWeight: 300,
+    [theme.breakpoints.only('mobile')]: {
+      fontSize: '1em',
+    },
+    [theme.breakpoints.only('tablet')]: {
+      fontSize: '1em',
+    },
+    [theme.breakpoints.only('laptop')]: {
+      fontSize: '1.5em',
+    },
+    [theme.breakpoints.only('desktop')]: {
+      fontSize: '1.3em',
+    },
+  };
+
+  // const theme = createTheme({
+  //   breakpoints: {
+  //     values: {
+  //       mobile: 0,
+  //       tablet: 750,
+  //       laptop: 1100,
+  //       desktop: 1200,
+  //     },
+  //   },
+  //   typography: {
+  //       h1: {
+  //         fontSize: 55,
+  //         fontFamily: 'Georgia'
+  //       },
+  //       h2: {
+  //         fontSize: 35,
+  //         fontFamily: 'Helvetica'
+  //       },
+  //       h3: {
+  //         fontSize: 20,
+  //         fontFamily: 'Georgia'
+  //       },
+  //       h4: {
+  //         fontSize: 30,
+  //         fontFamily: 'Georgia'
+  //       },
+  //       h5: {
+  //         // fontSize: 20,
+  //         // fontFamily: 'Georgia'
+  //       },
+  //       body1: {
+  //         fontWeight: 500,
+  //         fontFamily: 'Helvetica'
+  //       },
+  //     }
+  // });
 
   return (
     <>

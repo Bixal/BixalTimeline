@@ -139,4 +139,14 @@
     .MuiTypography-root.MuiTypography-body1.accordDesc {
         padding-inline: 30px;
     }
+
+    .rowAccordion {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .columnAccordion {
+        display: flex;
+        flex-direction: column;
+    }
 }
