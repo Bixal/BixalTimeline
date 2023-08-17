@@ -68,4 +68,4 @@ export default function SmallCard({id, newDate, title, desc, photoData, video}) 
 
     </Accordion>
     </>)
-}
+}0

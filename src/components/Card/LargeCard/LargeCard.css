@@ -27,6 +27,14 @@ body {
     align-items: left;
 }
 
+.MuiTypography-root.MuiTypography-h1 {
+    padding: 0px;
+}
+
+.MuiTypography-root.MuiTypography-h5 {
+    padding: 0px 0px;
+}
+
 /* .MuiTypography-root.MuiTypography-h3 {
     font-size: 1.5rem;
 }
@@ -80,9 +88,14 @@ body {
     height: fit-content;
 }
 
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.modalContent {
+    height: 90%;
+    background-color: #deec1e;
+} 
+
 .MuiCardActions-root.MuiCardActions-spacing {
     padding-left: 0;
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
 .MuiCardContent-root.modalText{
@@ -137,7 +150,6 @@ body {
 
 .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.modalContent {
     height: 100%;
-    background-color: #f6f6f6;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -225,12 +237,7 @@ button.openChildModalBtn:hover {
     max-width: 100%;
 }
 
-/* .MuiTypography-root.MuiTypography-h4 {
-    padding-top: 30px;
-} */
-
 .MuiTypography-root.MuiTypography-body1 {
-    padding: 25px;
     text-align: left;
 }
 
@@ -262,8 +269,7 @@ button.openChildModalBtn:hover {
     }
 
     .MuiTypography-root.MuiTypography-h5 {
-        /* font-size: 1rem; */
-        /* padding-top: 20px; */
+        padding: 10px 0px;
     }
 
     .MuiTypography-root.MuiTypography-h5.scrollDesc {
@@ -317,7 +323,7 @@ button.openChildModalBtn:hover {
     .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.modalContent {
         height: 90%;
         width: 60%;
-        background-color: #f6f6f6;
+        background-color: #deec1e;
         overflow-x: hidden;
         overflow-y: auto;
     }
@@ -394,6 +400,10 @@ button.openChildModalBtn:hover {
 
     .react-player {
         width: 100%;
+    }
+
+    .MuiCardActions-root.MuiCardActions-spacing {
+        padding-top: 50px;
     }
      
 }
@@ -535,12 +545,8 @@ button.openChildModalBtn:hover {
     .modalImage {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;  
+        justify-content: center; 
     }
-
-    /* .modalTitle h2 {
-        font-size: 3.5em;
-    } */
 
     .MuiTypography-root.MuiTypography-h5.scrollDesc {
         padding: 30px
@@ -576,6 +582,10 @@ button.openChildModalBtn:hover {
     .react-player {
         max-width: 100%;
         height: auto;
+    }
+
+    .MuiCardActions-root.MuiCardActions-spacing {
+        padding-top: 50px;
     }
 
     /* GRID TEST */
