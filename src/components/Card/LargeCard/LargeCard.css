@@ -253,7 +253,6 @@ div#video.react-player {
     }
 
     .MuiTypography-root.MuiTypography-h5.scrollDesc {
-        /* font-size: 1rem; */
         padding-top: 20px;
     }
     
@@ -352,7 +351,6 @@ div#video.react-player {
     }
 
     .modalTitle h2 {
-        /* font-size: 2em; */
         font-weight: 400;
         padding: 10px;
     }
@@ -417,24 +415,6 @@ div#video.react-player {
     .MuiTypography-root {
         align-items: left;
     }
-
-    /* .MuiTypography-root.MuiTypography-h3 {
-        font-size: 3.5rem;
-    } */
-
-    /* .MuiTypography-root.MuiTypography-h4 {
-        font-size: 1.5rem;
-        padding: 20px;
-    } */
-
-    /* .MuiTypography-root.MuiTypography-h5 {
-        font-size: 1.5rem;
-    }
-
-    .MuiTypography-root.MuiTypography-h5.scrollDesc {
-        font-size: 1.5rem;
-        padding: 20px;
-    } */
     
     .MuiCardContent-root {
         display: flex;
@@ -473,10 +453,6 @@ div#video.react-player {
         align-self: center;
         width: auto;
     }
-    
-    /* .tlTitle {
-        font-size: 4em;
-    } */
     
     .v_line {
         height: 75px;

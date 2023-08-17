@@ -122,10 +122,10 @@ function App() {
       fontSize: '1em',
     },
     [theme.breakpoints.only('laptop')]: {
-      fontSize: '1em',
+      fontSize: '1.5em',
     },
     [theme.breakpoints.only('desktop')]: {
-      fontSize: '1em',
+      fontSize: '1.5em',
     },
   };
   // Modal Description
@@ -145,43 +145,6 @@ function App() {
       fontSize: '1.3em',
     },
   };
-
-  // const theme = createTheme({
-  //   breakpoints: {
-  //     values: {
-  //       mobile: 0,
-  //       tablet: 750,
-  //       laptop: 1100,
-  //       desktop: 1200,
-  //     },
-  //   },
-  //   typography: {
-  //       h1: {
-  //         fontSize: 55,
-  //         fontFamily: 'Georgia'
-  //       },
-  //       h2: {
-  //         fontSize: 35,
-  //         fontFamily: 'Helvetica'
-  //       },
-  //       h3: {
-  //         fontSize: 20,
-  //         fontFamily: 'Georgia'
-  //       },
-  //       h4: {
-  //         fontSize: 30,
-  //         fontFamily: 'Georgia'
-  //       },
-  //       h5: {
-  //         // fontSize: 20,
-  //         // fontFamily: 'Georgia'
-  //       },
-  //       body1: {
-  //         fontWeight: 500,
-  //         fontFamily: 'Helvetica'
-  //       },
-  //     }
-  // });
 
   return (
     <>
