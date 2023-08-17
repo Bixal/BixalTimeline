@@ -80,10 +80,10 @@ function App() {
     fontFamily: 'Georgia',
     fontWeight: 300,
     [theme.breakpoints.only('mobile')]: {
-      fontSize: '.75em',
+      fontSize: '1em',
     },
     [theme.breakpoints.only('tablet')]: {
-      fontSize: '.8em',
+      fontSize: '1em',
     },
     [theme.breakpoints.only('laptop')]: {
       fontSize: '1em',
@@ -97,7 +97,8 @@ function App() {
     fontFamily: 'Georgia',
     fontWeight: 300,
     [theme.breakpoints.only('mobile')]: {
-      fontSize: '1.5em',
+      fontSize: '1em',
+      fontWeight: 600,
     },
     [theme.breakpoints.only('tablet')]: {
       fontSize: '1.5rem',
@@ -114,10 +115,11 @@ function App() {
     fontFamily: 'Georgia',
     fontWeight: 300,
     [theme.breakpoints.only('mobile')]: {
-      fontSize: '.75em',
+      fontSize: '1em',
+      textAlign: 'center',
     },
     [theme.breakpoints.only('tablet')]: {
-      fontSize: '.8em',
+      fontSize: '1em',
     },
     [theme.breakpoints.only('laptop')]: {
       fontSize: '1em',

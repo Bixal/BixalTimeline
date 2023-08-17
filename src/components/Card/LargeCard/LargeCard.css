@@ -21,6 +21,11 @@ body {
 
 .MuiTimeline-root {
     margin: 0 auto;
+    width: 100%;
+}
+
+.MuiTimeline-root.MuiTimeline-positionLeft {
+    padding: 0px;
 }
 
 .MuiTypography-root {
@@ -35,20 +40,7 @@ body {
     padding: 0px 0px;
 }
 
-/* .MuiTypography-root.MuiTypography-h3 {
-    font-size: 1.5rem;
-}
-
-.MuiTypography-root.MuiTypography-h4 {
-    font-size: 1rem;
-}
-
-.MuiTypography-root.MuiTypography-h5 {
-    font-size: 1rem;
-} */
-
 .MuiTypography-root.MuiTypography-h5.scrollDesc {
-    /* font-size: 1rem; */
     padding-top: 20px;
 }
 
@@ -65,27 +57,12 @@ body {
     color: #172d6a;
 }
 
-/* .MuiTimelineItem-root:nth-child(3n+0) .MuiCardContent-root {
-    background-color: #bee9f6;
-    color: #55052a;
-}
-
-.MuiTimelineItem-root:nth-child(3n-1) .MuiCardContent-root{
-    background-color: #deec1e;
-    color: #172d6a;
-}
-
-.MuiTimelineItem-root:nth-child(3n-2) .MuiCardContent-root {
-    background-color: #fda305;
-    color: #172d6a
-} */
-
 .MuiTimeline-root.MuiTimeline-poisitionAlternate {
     width: 100%;
 }
 
 .MuiCardMedia-root.MuiCardMedia-media.MuiCardMedia-img {
-    height: fit-content;
+    height: auto;
 }
 
 .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.modalContent {
@@ -109,14 +86,11 @@ body {
     border: 1px solid #172d6a;
     border-radius: 0px;
     padding-inline: 20px;
-    /* font-size: 1em;; */
 }
 
 #closeBtn.MuiButtonBase-root.MuiButton-root {
     border: none;
 }
-
-
 
 .MuiButtonBase-root.MuiButton-root:hover{
     background-color: transparent;
@@ -127,23 +101,13 @@ body {
     outline: none;
 }
 
-/* .moreBtn {
-    display: flex;
-    align-items: center;
-    color: #7d0096;
-} */
-
 .cardImage {
     align-self: center;
 }
 
-/* .tlTitle {
-    font-size: 4em;
-} */
-
 .v_line {
     border-left: 2px solid #172d6a;
-    height: 40px;
+    height: 30px;
     margin: 20px auto;
     width: 2px;
 }
@@ -152,6 +116,10 @@ body {
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+.modalImage {
+    padding: 30px;
 }
 
 .modalContent {
@@ -182,7 +150,6 @@ body {
 }
 
 .modalTitle h2 {
-    /* font-size: 2em; */
     padding: 10px;
     font-weight: 400;
 }
@@ -197,10 +164,10 @@ button#closeBtn.MuiButtonBase-root.MuiButton-root {
     width: 100%;
     justify-content: right;
     padding-right: 10px;
-    /* font-size: 1em; */
 }
 
 button.openChildModalBtn {
+    border-radius: 0px;
     border: none;
     padding: 0px;
 }
@@ -237,8 +204,13 @@ button.openChildModalBtn:hover {
     max-width: 100%;
 }
 
+div#video.react-player {
+    height: auto;
+}
+
 .MuiTypography-root.MuiTypography-body1 {
     text-align: left;
+    padding: 0;
 }
 
 /* TABLET SCREEN SIZES */
@@ -261,6 +233,14 @@ button.openChildModalBtn:hover {
     .MuiTimeline-root {
         width: 80%;
         margin: 0 auto;
+    }
+
+    .MuiTimeline-root.MuiTimeline-positionLeft {
+        padding: 6px 16px;
+    }
+
+    .MuiTypography-root.MuiTypography-body1 {
+        padding: 6px 16px;
     }
     
     .MuiTypography-root {
@@ -309,10 +289,6 @@ button.openChildModalBtn:hover {
         align-self: center;
         width: 50%
     }
-    
-    /* .tlTitle {
-        font-size: 4em;
-    } */
     
     .v_line {
         height: 75px;
@@ -391,6 +367,10 @@ button.openChildModalBtn:hover {
         display: flex;
         flex-direction: column;
     }
+
+    button.openChildModalBtn {
+        width: 100%
+    }
     
     .MuiCardMedia-root.childModalPhoto {
         width: 100%;
@@ -404,6 +384,10 @@ button.openChildModalBtn:hover {
 
     .MuiCardActions-root.MuiCardActions-spacing {
         padding-top: 50px;
+    }
+
+    .MuiCardMedia-root.MuiCardMedia-media.MuiCardMedia-img {
+        height: auto;
     }
      
 }
@@ -465,8 +449,8 @@ button.openChildModalBtn:hover {
     }
 
     .MuiCardMedia-root.MuiCardMedia-media.MuiCardMedia-img {
-        height: 250px;
-        width: 300px;
+        height: 300px;
+        width: 400px;
     }
 
     .MuiPaper-root-MuiCard-root {
@@ -581,7 +565,6 @@ button.openChildModalBtn:hover {
 
     .react-player {
         max-width: 100%;
-        height: auto;
     }
 
     .MuiCardActions-root.MuiCardActions-spacing {
