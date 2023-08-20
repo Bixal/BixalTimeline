@@ -26,9 +26,11 @@ function App() {
         setResponseData(response.data.results)
         // console.log(response)
       })
-  })
+  }, [])
 
   if (!responseData) return null;
+
+  console.log(responseData)
 
   const theme = createTheme({
     breakpoints: {
